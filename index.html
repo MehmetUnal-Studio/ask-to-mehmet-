@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MehmetUnal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1 class="h3 mb-3 font-weight-normal">_______=> Speak With Mehmet</h1>
+
+    <div id="Mehmet">
+        <div id="output"></div>
+        <div id="typing"></div>
+    </div>
+    <form class="form-signin">
+
+
+    <div class="container">
+        <input type="text" id="handle" class="form-control" placeholder="name" required autofocus>
+        <br>
+        
+
+        <input type="text" id="message" class="form-control" placeholder="message to MehmetUnal" required>
+        <br>
+        <br>
+
+        <button  id="button"  class="btn btn-lg btn-primary btn-block" type="submit">Send to Mehmet</button>
+        <br>
+    </div>
+
+    </form>
+
+
+
+
+    <!-- PUBLIC_CLIENT -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js" async defer></script>
+
+</body>
+
+</html>
