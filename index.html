@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MehmetUnal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
 </head>
+
+
 
 <body>
 
@@ -16,29 +21,52 @@
         <div id="output"></div>
         <div id="typing"></div>
     </div>
+
+
     <form class="form-signin">
 
+        <div class="container">
+            <input type="text" id="handle" class="form-control" placeholder="name" required autofocus>
+            <br>
+            <input type="text" id="message" class="form-control" placeholder="message to MehmetUnal" required>
+            <br>
+            <br>
 
-    <div class="container">
-        <input type="text" id="handle" class="form-control" placeholder="name" required autofocus>
-        <br>
-        
-
-        <input type="text" id="message" class="form-control" placeholder="message to MehmetUnal" required>
-        <br>
-        <br>
-
-        <button  id="button"  class="btn btn-lg btn-primary btn-block" type="submit">Send to Mehmet</button>
-        <br>
-    </div>
+            <button id="button" class="btn btn-lg btn-primary btn-block" type="submit">Send to Mehmet</button>
+            <br>
+        </div>
 
     </form>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                remote
+                <video class="rVideo" autoplay="autplay">
+           
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                local
+                <video class="lVideo" autoplay="autplay" muted>
+            </div>
+        </div>
+        <span id="displayId"></span>
+        <input type="text" id="connId" class="form-control" placeholder="Enter connection id" required>
+        <button id="conn_button" class="btn btn-lg btn-success btn-block" type="submit">connect</button>
+        <button id="call_button" class="btn btn-lg btn-danger btn-block" type="submit">call</button>
+        <br>
+    </div>
 
 
 
 
     <!-- PUBLIC_CLIENT -->
     <script src="/socket.io/socket.io.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+
     <script src="/client.js" async defer></script>
 
 </body>
